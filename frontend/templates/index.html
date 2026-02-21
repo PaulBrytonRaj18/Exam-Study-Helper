@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mnemo Study // RAG Core</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+
+    <div class="landing-container">
+        <div class="hero-section">
+            <h1>MNEMO    <span style="color:var(--primary-neon)">STUDY</span></h1>
+            <p style="color: var(--text-dim); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                Initialize your personal knowledge base. Upload PDFs, Notes, or Docs. 
+                Our neural engine will vectorize your content for context-aware querying.
+            </p>
+        </div>
+
+        <div class="glass-panel upload-area" id="drop-zone">
+            <ion-icon name="cloud-upload-outline" style="font-size: 4rem; color: var(--primary-neon);"></ion-icon>
+            <h3 class="glow-text" style="margin: 1rem 0;">Drag & Drop Materials</h3>
+            <p style="color: var(--text-dim);">or click to browse local drive</p>
+            <input type="file" id="file-input" multiple hidden>
+        </div>
+
+        <div class="file-list" id="file-list">
+            </div>
+
+        <div style="margin-top: 2rem;">
+            <button class="btn" id="vectorize-btn" style="opacity: 0.5; pointer-events: none;">
+                Initialize Vectorization
+            </button>
+        </div>
+    </div>
+
+    <script src="/static/index.js"></script>
+</body>
+</html>

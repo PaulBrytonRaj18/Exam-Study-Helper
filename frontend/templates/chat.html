@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mnemo // Query Interface</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+
+    <div class="chat-layout">
+        <aside class="sidebar glass-panel" style="border-radius: 0;">
+            <div style="margin-bottom: 2rem;">
+                <h2>KNOWLEDGE <span style="color: var(--primary-neon)">BASE</span></h2>
+                <p style="font-size: 0.8rem; color: var(--text-dim);">Active Context</p>
+            </div>
+            
+            <ul class="doc-list">
+                <li><ion-icon name="document-text-outline"></ion-icon> Biology_Chapter_1.pdf</li>
+                <li><ion-icon name="document-text-outline"></ion-icon> Lecture_Notes_WK2.txt</li>
+                <li><ion-icon name="document-text-outline"></ion-icon> Advanced_Calculus.pdf</li>
+            </ul>
+
+            <div style="margin-top: auto;">
+                <button class="btn" style="width: 100%; font-size: 0.8rem;" onclick="window.location.href='/'">
+                    <ion-icon name="add-circle-outline"></ion-icon> Add Source
+                </button>
+            </div>
+        </aside>
+
+        <main class="chat-main">
+            <div class="glass-panel" style="padding: 1rem 2rem; border-radius: 0; border-bottom: var(--glass-border); display: flex; justify-content: space-between; align-items: center;">
+                <h3 class="glow-text">AI INFERENCE MODEL v2.0</h3>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <span style="height: 10px; width: 10px; background: #00ff00; border-radius: 50%; box-shadow: 0 0 10px #00ff00;"></span>
+                    <span style="font-size: 0.8rem; color: var(--text-dim);">SYSTEM ONLINE</span>
+                </div>
+            </div>
+
+            <div class="chat-window" id="chat-window">
+                <div class="message bot">
+                    <p><strong>NEXUS AI:</strong> I have analyzed your uploaded documents. I am ready to answer questions grounded specifically in your study materials.</p>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Query your data...">
+                <button class="btn" id="send-btn">
+                    <ion-icon name="send-sharp"></ion-icon>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/chat.js"></script>
+</body>
+</html>
